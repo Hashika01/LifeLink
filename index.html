@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeLink — Emergency Response Platform</title>
+  <meta name="description" content="LifeLink v3.0 — AI-powered emergency response platform. Real-time dispatch, GPS tracking, AI classification." />
+  <meta property="og:title" content="LifeLink — Emergency Response Platform" />
+  <meta property="og:description" content="LifeLink v3.0 — AI-powered emergency response. Real AI classification, GPS, live dispatch." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚨</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="llr" class="llgrid">
+
+  <!-- AMBIENT GLOWS -->
+  <div aria-hidden="true" class="glow-red"></div>
+  <div aria-hidden="true" class="glow-blue"></div>
+
+  <!-- NAVBAR -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">
+      <span style="font-size:18px">🚨</span>
+      <span class="nav-title">LifeLink</span>
+      <span class="tag tr" style="font-size:8px;padding:1px 6px;">v3.0</span>
+    </div>
+    <div class="nav-links">
+      <button class="nb act" data-page="home">🏠 Home</button>
+      <button class="nb" data-page="dashboard">🧠 AI Dashboard</button>
+      <button class="nb" data-page="command">⚡ Command Center</button>
+      <button class="nb" data-page="safety">🛡️ Safety Modes</button>
+      <button class="nb" data-page="history">📋 History</button>
+    </div>
+    <div class="nav-status">
+      <div class="dot dl" id="navLiveDot" style="display:none"></div>
+      <span id="navStatusText" style="font-size:11px;color:#34507a;font-family:'Space Mono',monospace"></span>
+    </div>
+  </nav>
+
+  <!-- PAGES -->
+  <main id="page-home"     class="page active"></main>
+  <main id="page-dashboard" class="page"></main>
+  <main id="page-command"  class="page"></main>
+  <main id="page-safety"   class="page"></main>
+  <main id="page-history"  class="page"></main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
